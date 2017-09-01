@@ -8,11 +8,11 @@
 #kolla_ctl_install_type:
 
 # URL of Kolla source code repository if type is 'source'.
-#kolla_source_url:
+kolla_source_url: https://github.com/stackhpc/kolla
 
 # Version (branch, tag, etc.) of Kolla source code repository if type is
 # 'source'.
-#kolla_source_version:
+kolla_source_version: stackhpc/pike
 
 # URL of Kolla Ansible source code repository if type is 'source'.
 #kolla_ansible_source_url:
@@ -38,7 +38,7 @@
 
 # Kolla OpenStack release version. This should be a Docker image tag.
 #kolla_openstack_release:
-kolla_openstack_release: 5.0.0.0
+kolla_openstack_release: 5.0.0.0b3
 
 # Dict mapping names of sources to their definitions for
 # kolla_install_type=source. See kolla.common.config for details.
