@@ -11,7 +11,7 @@
 #ipa_build_source_url:
 
 # Version of IPA source repository.
-#ipa_build_source_version:
+ipa_build_source_version: stable/pike
 
 # URL of IPA upper constraints file.
 #ipa_build_upper_constraints_file_url:
