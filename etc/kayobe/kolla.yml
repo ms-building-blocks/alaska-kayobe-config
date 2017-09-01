@@ -71,11 +71,11 @@ kolla_build_blocks:
         && rm -rf /fluentd-monasca
   neutron_server_footer: |
     # We need a patch neutron to force the provision network MTU to 1500.
-    RUN pip install -U --no-deps git+https://github.com/stackhpc/neutron.git@stackhpc-11.0.0
+    RUN pip install -U --no-deps git+https://github.com/stackhpc/neutron.git@stackhpc/pike
     # There is no RDO RPM for this ML2 driver and Kolla's plugin mechanism only
     # supports source builds. Install a locally modified version with a fix for
     # Dell switches until it is released.
-    RUN pip install git+https://github.com/stackhpc/networking-generic-switch@stackhpc-0.4.0
+    RUN pip install git+https://github.com/stackhpc/networking-generic-switch@stackhpc/pike
     # The netmiko package has an issue which prevents it from working with
     # Neutron due to the use of eventlet, causing the library the enter an
     # infinite loop. This was fixed in netmiko-1.4.0.
@@ -86,11 +86,11 @@ kolla_build_blocks:
   magnum_api_footer: |
     # The Swarm Fedora-atomic ironic driver is currently in development, so
     # pull in a pike-based version of magnum with this change applied.
-    RUN pip install -U --no-deps git+https://github.com/stackhpc/magnum.git@stackhpc-5.0.0
+    RUN pip install -U --no-deps git+https://github.com/stackhpc/magnum.git@stackhpc/pike
   magnum_conductor_footer: |
     # The Swarm Fedora-atomic ironic driver is currently in development, so
     # pull in an pike-based version of magnum with this change applied.
-    RUN pip install -U --no-deps git+https://github.com/stackhpc/magnum.git@stackhpc-5.0.0
+    RUN pip install -U --no-deps git+https://github.com/stackhpc/magnum.git@stackhpc/pike
 
 # Dict mapping image customization variable names to their values.
 # Each variable takes the form:
